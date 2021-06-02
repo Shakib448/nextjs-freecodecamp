@@ -1,14 +1,18 @@
 export default {
   name: "chef",
-  title: "chef",
+  title: "Chef",
   type: "document",
   fields: [
-    { name: "name", title: "Chef's name", type: "string" },
+    {
+      name: "name",
+      title: "Chef's Name",
+      type: "string",
+    },
     {
       name: "image",
       title: "Image",
       type: "image",
-      optional: {
+      options: {
         hotspot: true,
       },
     },
@@ -20,7 +24,8 @@ export default {
         {
           title: "Block",
           type: "block",
-          styles: [{ tile: "Normal", value: "normal" }],
+          styles: [{ title: "Normal", value: "normal" }],
+          lists: [],
         },
       ],
     },
