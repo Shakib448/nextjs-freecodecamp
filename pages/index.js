@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import Link from "next/link";
 
-export default function Home() {
+export default function Home({ data }) {
+  const { recipes } = data;
   return (
     <div className={styles.container}>
       <Head>
@@ -15,6 +17,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <Link href="/about">
+          <a>{recipes[0].title}</a>
+        </Link>
 
         <p className={styles.description}>
           Get started by editing{" "}
@@ -67,3 +72,13 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps = () => {
+  return {
+    props: {
+      data: {
+        recipes: [{ title: "Apple Cider" }],
+      },
+    },
+  };
+};
