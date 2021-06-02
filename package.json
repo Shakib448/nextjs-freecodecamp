@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "studio": "npm start --prefix ./studio",
+    "server": "concurrently \"npm run dev\" \"npm run studio\""
   },
   "dependencies": {
     "axios": "^0.21.1",
