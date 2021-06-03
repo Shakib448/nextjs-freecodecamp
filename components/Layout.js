@@ -14,6 +14,7 @@ const Layout = ({ title, children }) => {
     </>
   );
 };
+red;
 
 Layout.defaultProps = {
   title: "Sanity With Next Js",
