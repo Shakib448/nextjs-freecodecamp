@@ -6,7 +6,12 @@ const recipesQuery = `*[_type == "recipe"]{
   _id,
   name,
   slug,
-  mainImage
+  mainImage{
+    asset->{
+      _id, 
+      url
+    }
+  }
 }`;
 
 export default function Home({ recipes }) {
