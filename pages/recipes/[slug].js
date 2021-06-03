@@ -52,7 +52,7 @@ export default function OneRecipe({ data, preview }) {
         {likes} ❤️
       </button>
 
-      <div className="content">
+      <main className="content">
         <img src={urlFor(recipe?.mainImage).url()} alt={recipe.name} />
         <div className="breakdown">
           <ul className="ingredients">
@@ -70,7 +70,7 @@ export default function OneRecipe({ data, preview }) {
             className="instructions"
           />
         </div>
-      </div>
+      </main>
     </article>
   );
 }
