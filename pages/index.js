@@ -15,7 +15,6 @@ const recipesQuery = `*[_type == "recipe"]{
 }`;
 
 export default function Home({ recipes }) {
-  console.log(recipes);
   return (
     <div>
       <h1>Welcome to Kap's Kitchen 🍍</h1>
